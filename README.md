@@ -1,3 +1,20 @@
+## How-to-run
+Install dependencies
+```
+$ pip install -r requirements.txt
+```
+
+And run the server
+```
+$ python manage.py runserver
+```
+
+(Optional) create `.env` file at the root of the project and fill in django secret key. 
+```
+touch .env
+echo 'SECRET_KEY=<your-secret-key>' > .env 
+```
+
 ## Info
 
 ### Группа 0: От самолётов к ракетам
