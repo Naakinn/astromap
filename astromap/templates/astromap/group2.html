@@ -1,0 +1,85 @@
+{% extends 'astromap/base.html' %}
+{% block content %}
+<div class="container-xxl">
+	<h1>Первые пилотируемые полёты</h1>
+
+	<!-- button trigger modal -->
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal0"> 0
+	</button>
+
+	<!-- modal -->
+	<div class="modal fade" id="modal0" tabindex="-1" aria-labelledby="modal0-label" aria-hidden="true">
+		<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modal0-label">1961 год: Первый полёт человека в космос</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- button trigger modal -->
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1"> 1
+	</button>
+
+	<!-- modal -->
+	<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1-label" aria-hidden="true">
+		<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modal1-label">1961 год: Полёт Германа Титова — первый суточный полёт в космосе</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- button trigger modal -->
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2"> 2
+	</button>
+
+	<!-- modal -->
+	<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal1-label" aria-hidden="true">
+		<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modal2-label">1963 год: Первая женщина в космосе</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- button trigger modal -->
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3"> 3
+	</button>
+
+	<!-- modal -->
+	<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal1-label" aria-hidden="true">
+		<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modal3-label">1964 год: Первый многоместный космический корабль "Восход-1"</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<a class="btn btn-primary" href="{% url 'group1_view' %}">Вернуться</a>
+	<a class="btn btn-primary" href="{% url 'group3_view' %}">Продолжить</a>
+</div>
+{% endblock %}
