@@ -1,0 +1,62 @@
+#start-button {
+	margin: auto;
+}
+
+.title {
+	margin: 1rem 1rem 1rem 1rem;
+	text-align: center;
+}
+
+.container {
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+.stars {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	pointer-events: none;
+}
+
+.star {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: white;
+	border-radius: 50%;
+	animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+
+	0%,
+	100% {
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+/* .moon { */
+/* 	height: 400px; */
+/* 	width: 400px; */
+/* 	background: #D2CABB; */
+/* 	border-radius: 50%; */
+/* 	position: fixed; */
+/* 	bottom: 0; */
+/* 	right: 0; */
+/* } */

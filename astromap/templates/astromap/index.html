@@ -1,7 +1,24 @@
 {% extends 'astromap/base.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
 {% block content %}
-<div class="container-xxl">
-	<h1>История российской космонавтики</h1>
-	<a class="btn btn-primary" href="{% url 'group0_view' %}">Начать</a>
+<div class="title">
+	<h1>Начните изучение космоса</h1>
+	<h1>прямо сейчас!</h1>
+</div>
+
+<div class="stars">
+	<div class="star" style="top: 10%; left: 20%;"></div>
+	<div class="star" style="top: 30%; left: 50%;"></div>
+	<div class="star" style="top: 70%; left: 80%;"></div>
+	<div class="star" style="top: 50%; left: 10%;"></div>
+	<div class="star" style="top: 90%; left: 40%;"></div>
+</div>
+
+<div class="container">
+	<a id="start-button" class="btn btn-lg btn-primary" href="{% url 'map_view' %}">Начать</a>
 </div>
 {% endblock %}

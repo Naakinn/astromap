@@ -1,0 +1,561 @@
+{% extends 'astromap/base.html' %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/map.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="carouselExample" class="carousel slide" style="height: 25rem;">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">1. От самолётов к ракетам</h5>
+						<p class="card-text">
+							Эта группа посвящена истокам космонавтики — тому, как человечество перешло от мечтаний о
+							полётах к созданию первых ракет. Здесь вы найдёте ключевые этапы развития ракетной техники,
+							начиная с теоретических работ пионеров космонавтики и заканчивая первыми практическими
+							шагами в создании ракет.
+						</p>
+						<!-- button trigger modal00 -->
+						<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal00">
+							Вперёд
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">2. Начало космической эры</h5>
+						<p class="card-text">
+							Эта группа посвящена первым шагам человечества в космос. Здесь собраны ключевые события,
+							которые ознаменовали начало космической эры и доказали, что освоение космоса — это не просто
+							мечта, а реальность. От запуска первого искусственного спутника Земли до первых исследований
+							Луны — эти достижения стали фундаментом для дальнейшего развития космонавтики и вдохновили
+							весь мир на новые открытия.
+						</p>
+						<!-- button trigger modal10 -->
+						<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal10">
+							Вперёд
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">3. Первые пилотируемые полёты</h5>
+						<p class="card-text">
+							Эта группа посвящена самым важным моментам в истории пилотируемой космонавтики. Здесь вы
+							узнаете о первых людях, которые отправились в космос, и о тех, кто доказал, что человек
+							может не только выживать, но и работать в условиях невесомости. Эти полёты стали настоящим
+							прорывом, открыв новую эру — эру человеческого присутствия в космосе.
+						</p>
+						<!-- button trigger modal20 -->
+						<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal20">
+							Вперёд
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">4. Освоение Луны и межпланетные миссии</h5>
+						<p class="card-text">
+							Эта группа посвящена первым шагам человечества в исследовании других небесных тел. Здесь
+							собраны ключевые достижения, связанные с изучением Луны и планет Солнечной системы. От
+							первых снимков лунной поверхности до посадки на Марс — эти миссии расширили наши знания о
+							космосе и доказали, что человечество способно исследовать не только Землю, но и далёкие
+							миры.
+						</p>
+						<!-- button trigger modal30 -->
+						<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal30">
+							Вперёд
+						</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">5. Создание орбитальных станций</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of
+							the
+							card's content.</p>
+						<!-- button trigger modal40 -->
+						<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal40">
+							Вперёд
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">6. Современные достижения</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of
+							the
+							card's content.</p>
+						<!-- button trigger modal50 -->
+						<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal50">
+							Вперёд
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+<!-- GROUP 0 -->
+
+
+<!-- modal -->
+<div class="modal fade" id="modal00" tabindex="-1" aria-labelledby="modal00-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal00-label">1903 год: теоретические основы космонавтики</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal01" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal01" tabindex="-1" aria-labelledby="modal01-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal01-label">1929 год: Первые эксперименты с ракетными
+					двигателями</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal00" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal02" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal02" tabindex="-1" aria-labelledby="modal02-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal02-label">1933 год: Первая советская жидкостная ракета
+					(ГИРД-09)</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal01" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal03" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal03" tabindex="-1" aria-labelledby="modal02-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal03-label">1941–1945 годы: Разработка ракетной техники в годы
+					Великой Отечественной войны</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal02" data-bs-toggle="modal">Назад</button>
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- GROUP 1 -->
+
+
+<!-- modal -->
+<div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="modal10-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal10-label">1957 год: Запуск первого искусственного спутника
+					Земли "Спутник-1</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal11" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal11" tabindex="-1" aria-labelledby="modal11-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal11-label">1957 год: Запуск "Спутника-2" с собакой Лайкой на
+					борту</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal10" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal12" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal12" tabindex="-1" aria-labelledby="modal12-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal12-label">1959 год: Запуск "Луны-1" — первой станции,
+					достигшей второй космической скорости</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal11" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal13" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal13" tabindex="-1" aria-labelledby="modal12-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal13-label">1959 год: Запуск "Луны-3" — первые снимки обратной
+					стороны Луны</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal12" data-bs-toggle="modal">Назад</button>
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- GROUP 2 -->
+
+
+<!-- modal -->
+<div class="modal fade" id="modal20" tabindex="-1" aria-labelledby="modal20-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal20-label">1961 год: Первый полёт человека в космос</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal21" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal21" tabindex="-1" aria-labelledby="modal21-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal21-label">1961 год: Полёт Германа Титова — первый суточный
+					полёт в космосе</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal20" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal22" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal22" tabindex="-1" aria-labelledby="modal22-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal22-label">1963 год: Первая женщина в космосе</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal21" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal23" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal23" tabindex="-1" aria-labelledby="modal22-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal23-label">1964 год: Первый многоместный космический корабль
+					"Восход-1"</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal22" data-bs-toggle="modal">Назад</button>
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- GROUP 3 -->
+
+
+<!-- modal -->
+<div class="modal fade" id="modal30" tabindex="-1" aria-labelledby="modal30-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal30-label">1966 год: Первая мягкая посадка на Луну ("Луна-9")
+				</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal31" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal31" tabindex="-1" aria-labelledby="modal31-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal31-label">1966 год: Первый искусственный спутник Луны
+					("Луна-10")</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal30" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal32" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal32" tabindex="-1" aria-labelledby="modal32-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal32-label">1970 год: Первый луноход ("Луноход-1")</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal31" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal33" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal33" tabindex="-1" aria-labelledby="modal32-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal33-label">1971 год: Первая посадка на Марс ("Марс-3")</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal32" data-bs-toggle="modal">Назад</button>
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- GROUP 4 -->
+
+
+<!-- modal -->
+<div class="modal fade" id="modal40" tabindex="-1" aria-labelledby="modal40-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal40-label">1971 год: Запуск первой орбитальной станции
+					"Салют-1"</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal41" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal41" tabindex="-1" aria-labelledby="modal41-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal41-label">1971 год: Первая посадка на Марс ("Марс-3")</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal40" data-bs-toggle="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal42" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal42" tabindex="-1" aria-labelledby="modal42-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal42-label">1986 год: Запуск станции "Мир"</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal41" data-bs-toggle="modal">Назад</button>
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- GROUP 5 -->
+
+
+<!-- modal -->
+<div class="modal fade" id="modal50" tabindex="-1" aria-labelledby="modal50-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal50-label">2000 год: Начало работы Международной космической
+					станции (МКС)</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+				<button class="btn btn-primary" data-bs-target="#modal51" data-bs-toggle="modal">Продолжить</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="modal51" tabindex="-1" aria-labelledby="modal41-label" aria-hidden="true">
+	<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="modal51-label">2020 год: Запуск модуля "Наука" для МКС</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-secondary" data-bs-target="#modal50" data-bs-toggle="modal">Назад</button>
+				<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

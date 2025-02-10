@@ -1,0 +1,19 @@
+.container-xxl {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3rem;
+}
+
+.navbar-brand {
+	display: flex;
+	text-align: center;
+}
+
+#nav-title {
+	margin: auto auto auto 0;
+}
+
+.btn {
+	border-radius: 0px;
+}
