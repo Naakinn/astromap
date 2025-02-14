@@ -9,3 +9,6 @@ def index_view(request):
 
 def map_view(request): 
     return render(request, "astromap/map.html")
+
+def quiz_view(request): 
+    return render(request, "astromap/quiz.html")

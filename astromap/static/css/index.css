@@ -1,10 +1,21 @@
-#start-button {
-	margin: auto;
+#button-vstack {
+	width: 17rem;
 }
 
 .title {
 	margin: 1rem 1rem 1rem 1rem;
 	text-align: center;
+}
+
+.quote-block {
+	position: absolute;
+	top: 90%;
+	width: 100%;
+	text-align: center;
+}
+
+h1 {
+	margin: auto;
 }
 
 .container {
@@ -14,10 +25,6 @@
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
-}
-
-h1 {
-	font-size: 2rem;
 }
 
 .stars {

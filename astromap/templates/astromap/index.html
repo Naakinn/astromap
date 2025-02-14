@@ -10,15 +10,19 @@
 	<h1>прямо сейчас!</h1>
 </div>
 
+<div class="quote-block">
+	<p class="text-center"><em>Per aspera ad astra!</em></p>
+</div>
+
 <div class="stars">
 	<div class="star" style="top: 10%; left: 20%;"></div>
-	<div class="star" style="top: 30%; left: 50%;"></div>
 	<div class="star" style="top: 70%; left: 80%;"></div>
 	<div class="star" style="top: 50%; left: 10%;"></div>
 	<div class="star" style="top: 90%; left: 40%;"></div>
 </div>
 
-<div class="container">
+<div id="button-vstack" class="vstack gap-2 col-md-5 mx-auto">
 	<a id="start-button" class="btn btn-lg btn-secondary" href="{% url 'map_view' %}">Начать</a>
+	<a id="quiz-button" class="btn btn-lg btn-secondary" href="{% url 'quiz_view' %}">Тест для самопроверки</a>
 </div>
 {% endblock %}

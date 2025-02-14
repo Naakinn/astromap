@@ -1,0 +1,676 @@
+{% extends 'astromap/base.html' %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-sm">
+	<h1 id="title">Викторина по истории космонавтики</h1>
+</div>
+
+<div id="questions" class="container-xxl">
+	<div class="list-group">
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question1">Вопрос 1</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question2">Вопрос 2</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question3">Вопрос 3</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question4">Вопрос 4</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question5">Вопрос 5</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question6">Вопрос 6</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question7">Вопрос 7</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question8">Вопрос 8</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question9">Вопрос 9</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question10">Вопрос 10</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question11">Вопрос 11</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question12">Вопрос 12</button>
+
+		<button type="button" class="list-group-item btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#question13">Вопрос 13</button>
+	</div>
+
+	<div class="modal fade" id="question1" tabindex="-1" aria-labelledby="question1Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question1Label">Вопрос 1</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-center">
+						В каком году Константин Циолковский опубликовал работу "Исследование мировых пространств
+						реактивными приборами"?
+					</p>
+					<form id="form1" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question1" id="q1a1" value="A">
+							<label class="form-check-label" for="q1a1">
+								1900
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question1" id="q1a2" value="B">
+							<label class="form-check-label" for="q1a2">
+								1903
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question1" id="q1a3" value="C">
+							<label class="form-check-label" for="q1a3">
+								1910
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question1" id="q1a4" value="D">
+							<label class="form-check-label" for="q1a4">
+								1915
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(1, 'B')">Проверить</button>
+					</form>
+					<div id="result1" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question2" tabindex="-1" aria-labelledby="question2Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question2Label">Вопрос 2</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Кто создал первый советский ракетный двигатель ОР-1?</p>
+					<form id="form2" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question2" id="q2a1" value="A">
+							<label class="form-check-label" for="q2a1">
+								Сергей Королёв
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question2" id="q2a2" value="B">
+							<label class="form-check-label" for="q2a2">
+								Фридрих Цандер
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question2" id="q2a3" value="C">
+							<label class="form-check-label" for="q2a3">
+								Юрий Гагарин
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question2" id="q2a4" value="D">
+							<label class="form-check-label" for="q2a4">
+								Константин Циолковский
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(2, 'B')">Проверить</button>
+					</form>
+					<div id="result2" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question3" tabindex="-1" aria-labelledby="question3Label" aria-hidden="true">
+		<div class="modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question3Label">Вопрос 3</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Какая ракета была первой советской жидкостной ракетой?</p>
+					<form id="form3" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question3" id="q3a1" value="A">
+							<label class="form-check-label" for="q3a1">
+								ГИРД-08
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question3" id="q3a2" value="B">
+							<label class="form-check-label" for="q3a2">
+								ГИРД-09
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question3" id="q3a3" value="C">
+							<label class="form-check-label" for="q3a3">
+								ГИРД-10
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question3" id="q3a4" value="D">
+							<label class="form-check-label" for="q3a4">
+								ГИРД-11
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(3, 'B')">Проверить</button>
+					</form>
+					<div id="result3" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question4" tabindex="-1" aria-labelledby="question4Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question4Label">Вопрос 4</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Что было создано в годы Великой Отечественной войны в области ракетной
+						техники?</p>
+					<form id="form4" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question4" id="q4a1" value="A">
+							<label class="form-check-label" for="q4a1">
+								Первый спутник
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question4" id="q4a2" value="B">
+							<label class="form-check-label" for="q4a2">
+								Ракетные системы, такие как "Катюша"
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question4" id="q4a3" value="C">
+							<label class="form-check-label" for="q4a3">
+								Первый космический корабль
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question4" id="q4a4" value="D">
+							<label class="form-check-label" for="q4a4">
+								Первый искусственный спутник Луны
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(4, 'B')">Проверить</button>
+					</form>
+					<div id="result4" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question5" tabindex="-1" aria-labelledby="question5Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question5Label">Вопрос 5</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Какой спутник был первым искусственным спутником Земли?</p>
+					<form id="form5" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question5" id="q5a1" value="A">
+							<label class="form-check-label" for="q5a1">
+								Спутник-2
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question5" id="q5a2" value="B">
+							<label class="form-check-label" for="q5a2">
+								Спутник-1
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question5" id="q5a3" value="C">
+							<label class="form-check-label" for="q5a3">
+								Луна-1
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question5" id="q5a4" value="D">
+							<label class="form-check-label" for="q5a4">
+								Луна-3
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(5, 'B')">Проверить</button>
+					</form>
+					<div id="result5" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question6" tabindex="-1" aria-labelledby="question6Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question6Label">Вопрос 6</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Кто был первым живым существом, отправленным в космос?</p>
+					<form id="form6" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question6" id="q6a1" value="A">
+							<label class="form-check-label" for="q6a1">
+								Белка
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question6" id="q6a2" value="B">
+							<label class="form-check-label" for="q6a2">
+								Собака Лайка
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question6" id="q6a3" value="C">
+							<label class="form-check-label" for="q6a3">
+								Мышь
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question6" id="q6a4" value="D">
+							<label class="form-check-label" for="q6a4">
+								Кошка
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(6, 'B')">Проверить</button>
+					</form>
+					<div id="result6" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question7" tabindex="-1" aria-labelledby="question7Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question7Label">Вопрос 7</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Какой аппарат первым достиг второй космической скорости?</p>
+					<form id="form7" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question7" id="q7a1" value="A">
+							<label class="form-check-label" for="q7a1">
+								Спутник-1
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question7" id="q7a2" value="B">
+							<label class="form-check-label" for="q7a2">
+								Луна-1
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question7" id="q7a3" value="C">
+							<label class="form-check-label" for="q7a3">
+								Луна-2
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question7" id="q7a4" value="D">
+							<label class="form-check-label" for="q7a4">
+								Луна-3
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(7, 'B')">Проверить</button>
+					</form>
+					<div id="result7" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question8" tabindex="-1" aria-labelledby="question8Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question8Label">Вопрос 8</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Какой аппарат передал первые снимки обратной стороны Луны?</p>
+					<form id="form8" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question8" id="q8a1" value="A">
+							<label class="form-check-label" for="q8a1">
+								Луна-1
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question8" id="q8a2" value="B">
+							<label class="form-check-label" for="q8a2">
+								Луна-2
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question8" id="q8a3" value="C">
+							<label class="form-check-label" for="q8a3">
+								Луна-3
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question8" id="q8a4" value="D">
+							<label class="form-check-label" for="q8a4">
+								Луна-4
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(8, 'C')">Проверить</button>
+						<div id="result8" class="mt-2"></div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question9" tabindex="-1" aria-labelledby="question9Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question9Label">Вопрос 9</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Кто стал первым человеком, совершившим орбитальный полёт?</p>
+					<form id="form9" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question9" id="q9a1" value="A">
+							<label class="form-check-label" for="q9a1">
+								Герман Титов
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question9" id="q9a2" value="B">
+							<label class="form-check-label" for="q9a2">
+								Юрий Гагарин
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question9" id="q9a3" value="C">
+							<label class="form-check-label" for="q9a3">
+								Валентина Терешкова
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question9" id="q9a4" value="D">
+							<label class="form-check-label" for="q9a4">
+								Алексей Леонов
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(9, 'B')">Проверить</button>
+					</form>
+					<div id="result9" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question10" tabindex="-1" aria-labelledby="question10Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question10Label">Вопрос 10</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Кто провёл в космосе более суток, доказав возможность длительного
+						пребывания человека в невесомости?</p>
+					<form id="form10" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question10" id="q10a1" value="A">
+							<label class="form-check-label" for="q10a1">
+								Герман Титов
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question10" id="q10a2" value="B">
+							<label class="form-check-label" for="q10a2">
+								Юрий Гагарин
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question10" id="q10a3" value="C">
+							<label class="form-check-label" for="q10a3">
+								Валентина Терешкова
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question10" id="q10a4" value="D">
+							<label class="form-check-label" for="q10a4">
+								Алексей Леонов
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(10, 'A')">Проверить</button>
+					</form>
+					<div id="result10" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question11" tabindex="-1" aria-labelledby="question11Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question11Label">Вопрос 11</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Кто стала первой женщиной-космонавтом?</p>
+					<form id="form11" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question11" id="q11a1" value="A">
+							<label class="form-check-label" for="q11a1">
+								Светлана Савицкая
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question11" id="q11a2" value="B">
+							<label class="form-check-label" for="q11a2">
+								Валентина Терешкова
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question11" id="q11a3" value="C">
+							<label class="form-check-label" for="q11a3">
+								Елена Кондакова
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question11" id="q11a4" value="D">
+							<label class="form-check-label" for="q11a4">
+								Елена Серова
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(11, 'B')">Проверить</button>
+					</form>
+					<div id="result11" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question12" tabindex="-1" aria-labelledby="question12Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question12Label">Вопрос 12</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Какой корабль был первым многоместным космическим кораблём?</p>
+					<form id="form12" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question12" id="q12a1" value="A">
+							<label class="form-check-label" for="q12a1">
+								Восток-1
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question12" id="q12a2" value="B">
+							<label class="form-check-label" for="q12a2">
+								Восток-6
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question12" id="q12a3" value="C">
+							<label class="form-check-label" for="q12a3">
+								Восход-1
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question12" id="q12a4" value="D">
+							<label class="form-check-label" for="q12a4">
+								Восход-2
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(12, 'C')">Проверить</button>
+					</form>
+					<div id="result12" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="question13" tabindex="-1" aria-labelledby="question13Label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="question13Label">Вопрос 13</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="text-centered">Какой аппарат совершил первую мягкую посадку на Луну?</p>
+					<form id="form13" class="form-quiz">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question13" id="q13a1" value="A">
+							<label class="form-check-label" for="q13a1">
+								Луна-8
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question13" id="q13a2" value="B">
+							<label class="form-check-label" for="q13a2">
+								Луна-9
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question13" id="q13a3" value="C">
+							<label class="form-check-label" for="q13a3">
+								Луна-10
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="question13" id="q13a4" value="D">
+							<label class="form-check-label" for="q13a4">
+								Луна-11
+							</label>
+						</div>
+						<button type="button" class="btn btn-primary mt-3"
+							onclick="checkAnswer(13, 'B')">Проверить</button>
+					</form>
+					<div id="result13" class="mt-0"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function checkAnswer(questionNumber, correctAnswer) {
+
+			const selectedAnswer = document.querySelector('input[name="question' + questionNumber + '"]:checked');
+			const resultElement = document.getElementById('result' + questionNumber);
+
+			if (selectedAnswer) {
+				if (selectedAnswer.value === correctAnswer) {
+					resultElement.innerHTML = '<div class="alert alert-success mt-3 mb-0" role="alert">Правильно!</div>';
+				} else {
+					resultElement.innerHTML = '<div class="alert alert-danger mt-3 mb-0" role="alert">Неправильно! Попробуйте ещё раз.</div>';
+				}
+			} else {
+				resultElement.innerHTML = '<div class="alert alert-warning mt-3 mb-0" role="alert">Пожалуйста, выберите ответ.</div>';
+			}
+		}
+	</script>
+</div>
+
+{% endblock %}
